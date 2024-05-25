@@ -1,5 +1,8 @@
 theme = "adwaita-dark"
 
+[keys.insert]
+"A-k" = "normal_mode"
+
 [editor]
 line-number = "relative"
 cursorline = true
