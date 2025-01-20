@@ -1,27 +1,16 @@
-theme = "adwaita-dark"
-
-[keys.insert]
-"A-k" = "normal_mode"
+theme = "carbonfox"
 
 [editor]
 line-number = "relative"
-cursorline = true
+mouse = true
 
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
 select = "underline"
 
-[editor.statusline]
-left = ["mode", "spinner"]
-center = ["file-name"]
-right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
-separator = "│"
-mode.normal = "NORMAL"
-mode.insert = "INSERT"
-mode.select = "SELECT"
+[keys.normal]
+C-s = ":w" # Maps Ctrl-s to the typable command :w which is an alias for :write (save file)
 
-[editor.indent-guides]
-render = true
-character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
-skip-levels = 1
+[keys.insert]
+"A-k" = "normal_mode"     # Maps Alt-X to enter normal mode
