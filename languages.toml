@@ -80,3 +80,21 @@ name = "css"
 language-servers = [ "vscode-css-language-server", "emmet-ls", "tailwindcss-ls" ]
 formatter = { command = 'prettier', args = ["--parser", "css"] }
 auto-format = true
+
+# GO
+[[language]]
+name = "go"
+auto-format = true
+language-servers = [ "gopls", "golangci-lint-lsp" ]
+
+[language-server.golangci-lint-lsp]
+command = "golangci-lint-langserver"
+[language-server.golangci-lint-lsp.config]
+command = ["golangci-lint", "run", "--output.json.path", "stdout", "--show-stats=false", "--issues-exit-code=1"]
+
+[language-server.gopls]
+command = "gopls"
+args = ["-logfile=/tmp/gopls.log",  "serve"]
+[language-server.gopls.config]
+"ui.diagnostic.staticcheck" = true
+
